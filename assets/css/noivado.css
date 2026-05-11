@@ -236,3 +236,55 @@ nav{
             font-size: 0.8rem;
             color: #666;
         }
+
+/* --- RESPONSIVIDADE: PÁGINA NOIVADO --- */
+
+@media (max-width: 768px) {
+    /* Banner Principal */
+    .engagement-hero {
+        height: 250px;
+    }
+    
+    .engagement-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Grid de Produtos: 2 por linha em telas médias, 1 por linha em telas pequenas */
+    .products-container {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    /* Ajuste dos cards para telas pequenas */
+    .product-card {
+        padding: 10px;
+    }
+
+    .product-card img {
+        height: 200px; /* Imagem menor para caber melhor */
+    }
+
+    .product-card h3 {
+        font-size: 0.9rem;
+    }
+
+    /* Benefícios da Aura */
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* Nav do Header (Login/Cadastro) */
+    nav {
+        font-size: 0.7rem;
+        gap: 8px;
+    }
+}
+
+/* Para celulares bem pequenos (iPhone SE, etc) */
+@media (max-width: 480px) {
+    .products-container {
+        grid-template-columns: 1fr; /* 1 produto por linha */
+    }
+}
